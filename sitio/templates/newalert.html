@@ -1,0 +1,68 @@
+<!-- newalert.html -->
+
+{% extends "base.html" %}
+{% 'load static' %}
+{% block content %}
+<div class="containeralert">
+  <div class="card form-container">
+    <!-- Formulario para crear y modificar alertas -->
+    <form method="POST" id="alertForm">
+      {% csrf_token %}
+      {% if modificar_alerta %}
+      <h2>Modificar Alerta</h2>
+      {% else %}
+      <h2>Crear Nueva Alerta</h2>
+      {% endif %}
+      {{ form.as_p }}
+      <button type="submit">
+        {% if modificar_alerta %}
+        Guardar Cambios
+        {% else %}
+        Crear Alerta
+        {% endif %}
+      </button>
+    </form>
+  </div>
+
+  <div class="alert-list">
+    <h2>Lista de Alertas</h2>
+    <ul>
+      {% for alerta in alertas %}
+      <li>
+        <strong>{{ alerta.titulo }}</strong><br>
+        {{ alerta.descripcion }}<br>
+        Fecha: {{ alerta.fecha }}
+        <div class="action-buttons">
+          <form action="{% url 'modificar_alerta' alerta.pk %}" method="GET">
+            <button type="submit">Modificar</button>
+          </form>
+          <form action="{% url 'eliminar_alerta' alerta.pk %}" method="POST">
+            {% csrf_token %}
+            <button type="submit">Eliminar</button>
+          </form>
+        </div>
+      </li>
+      {% empty %}
+      <li>No hay alertas registradas.</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  // Configuración de ScrollReveal
+  ScrollReveal().reveal('.card', {
+    origin: 'left',
+    distance: '50px',
+    duration: 1000,
+    easing: 'ease-in-out',
+    reset: true,
+    interval: 200
+  });
+</script>
+
+{% endblock %}
+{% block additional_css %}
+<link rel="stylesheet" href="{% static 'sitio/styles/alernew.css' %}">
+{% endblock %}

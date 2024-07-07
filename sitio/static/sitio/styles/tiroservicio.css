@@ -1,0 +1,70 @@
+
+.imag{
+    position: relative;
+    opacity: 0.7;
+    width: 100%;
+}
+
+.imag img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.titulos{
+    position: absolute;
+    top: 110%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    background-color: rgb(203, 26, 26);
+    z-index: 100;
+    opacity: 0.9;
+}
+
+.titleserv{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+
+.subtitleinfo{
+    padding: 20px;
+}
+
+
+
+.cajitas{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.logito{
+    flex: 0 0 80px; /* Ajusta el tamaño del logo aquí */
+    margin-right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: black;
+    color: black;
+}
+
+.logito img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+    background-color: black;
+    color: black;
+}
+
+.cajitatext{
+    flex: 1;
+}

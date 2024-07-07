@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+<h1>Clima Actual</h1>
+{% if clima_actual %}
+    <p>Temperatura: {{ clima_actual.Temperature.Metric.Value }} °C</p>
+    <p>Condiciones: {{ clima_actual.WeatherText }}</p>
+{% elif error %}
+    <p>{{ error }}</p>
+{% endif %}
+
+
+<div>
+    <h1>Clima del dia</h1>
+    
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            alert("Geolocalización no es soportada por este navegador.");
+        }
+    });
+
+    function showPosition(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        console.log(`Latitud: ${latitude}, Longitud: ${longitude}`);
+
+        fetch('/clima/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            body: `latitude=${latitude}&longitude=${longitude}`
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                console.log('respuesta del servidor:', data)
+                document.getElementById('result').innerHTML = `Latitud: ${latitude}, Longitud: ${longitude}`;
+            } else {
+                console.error('Error al obtener la ubicación:', data.message);
+                alert('Error al obtener la ubicación: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error en la solicitud fetch:', error);
+        });
+    }
+
+    function showError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                alert("Usuario denegó la solicitud de geolocalización.");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                alert("La información de ubicación no está disponible.");
+                break;
+            case error.TIMEOUT:
+                alert("La solicitud de ubicación ha caducado.");
+                break;
+            case error.UNKNOWN_ERROR:
+                alert("Se produjo un error desconocido.");
+                break;
+        }
+    }
+</script>
+{% endblock %}
+
+{% block additional_css %}
+<link rel="stylesheet" href="{% static 'sitio/styles/climaestilo.css' %}">
+{% endblock %}

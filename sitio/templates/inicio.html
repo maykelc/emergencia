@@ -1,0 +1,139 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<!-- Banner -->
+<section class="banner">
+  <div class="containerbanner">
+    <div class="slider">
+      <div class="slides">
+        <div class="slide">
+          <img src="{% static 'sitio/assets/imagenes/bombero-en-Chile-slider.jpg' %}" alt="" class="imguno" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'sitio/assets/imagenes/bomberos-chile-inc.jpg' %}" alt="" class="imgdos" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'sitio/assets/imagenes/bomberos-slider.jpg' %}" alt="" class="imgtres" />
+        </div>
+      </div>
+    </div>
+    <div class="buttonbanner">
+      <button class="prevbanner">&#10094;</button>
+      <button class="nextbanner">&#10095;</button>
+    </div>
+  </div>
+</section>
+<!-- Fin Banner -->
+
+<!--Botones de Emergencia y Alerta -->
+<section class="home-buttons">
+  <div class="containerbutton">
+    <div class="btnemergency"><a href="{% url 'newalert' %}">Emergencias</a></div>
+    <div class="btnemergency"><a href="{% url 'newalert' %}">Alerta</a></div>
+  </div>
+</section>
+<!--Fin Botones de Emergencia y Alerta -->
+
+<!--Post Slider de Noticias -->
+<section class="noticias">
+
+  <div class="containernoticia">
+    <div class="slidernoticiaizq">
+      <div class="slider-news">
+        <h3>Ultimas Noticias</h3>
+        <div class="slidescard">
+          <div class="newslides">
+            <div class="news-card">
+              <div class="news-image">
+                <img src="" alt="" />
+              </div>
+              <div class="news-content">
+                <h3 class="titulonoticias">Titulo</h3>
+                <p class="describnoticias">Descripcion</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="buttonotice">
+          <button class="prev-news">&#10094;</button>
+          <button class="next-news">&#10095;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-sectionder">
+      <div class="card-section">
+        <div class="card-grid">
+          <ul class="filascard">
+            <div class="card">
+              <a href="">
+                <h3>Noticias </h3>
+                <p>Contenido de la card 1.</p>
+              </a>
+            </div>
+            <br>
+            <div class="card">
+              <a href="">
+                <h3>Clima </h3>
+
+                <p>Contenido de la card 2.</p>
+              </a>
+            </div>
+          </ul>
+          <ul class="filascard">
+            <div class="card">
+              <a href="">
+                <h3>Emergencias</h3>
+                <p>Contenido de la card 3.</p>
+              </a>
+            </div>
+            <br>
+            <div class="card">
+              <a href="">
+                <h3>Sismos</h3>
+                <p>Contenido de la card 4.</p>
+              </a>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Fin Post Slider de Noticias -->
+
+<!-- Central Online -->
+<section class="central-online">
+  <div class="containercentralr">
+    <div class="contentcentralr">
+      <h2>Central Online</h2>
+      <br>
+      <div class="onlinecentral">
+        <iframe width="100%" height="100" scrolling="no" frameborder="no"
+          src="https://api.broadcastify.com/embed/player/?key=24c25331-06a3-11ef-a7d7-0e676e2c8629&amp;feedId=36528&amp;html5=1&amp;stats=1&amp;as=1&amp;bg=000000&amp;fg=FFFFFF">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Fin Central Online -->
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  // Script ScrollReveal
+  document.addEventListener("DOMContentLoaded", function () {
+    // Configuración de ScrollReveal
+    ScrollReveal().reveal(".card", {
+      origin: "left", // Origen de la animación
+      distance: "50px", // Distancia de animación
+      duration: 1000, // Duración de la animación (en milisegundos)
+      easing: "ease-in-out", // Función de aceleración
+      reset: true, // Reiniciar animación al desplazarse hacia arriba
+      interval: 200 // Intervalo entre animaciones
+    });
+  });
+
+
+</script>
+
+{% endblock %} {% block additional_css %}
+<link rel="stylesheet" href="{% static 'sitio/styles/estiloinicio.css' %}" />
+{% endblock %}

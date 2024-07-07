@@ -1,0 +1,94 @@
+/* Establece una imagen de fondo */
+.leyend {
+    /* background-image: url("{% static 'sitio/assets/imagenes/bomberos-slider.jpg' %}");*/
+    background-size: cover;
+    /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center;
+    /* Centra la imagen */
+
+    /* Espacio interno superior e inferior */
+}
+
+.containerleyend {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan */
+    justify-content: space-between;
+    /* Distribuye los elementos a lo largo del eje principal (horizontalmente en este caso) */
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 33, 217, 1) 40%, rgba(0, 0, 0, 0.9724264705882353) 80%);
+    padding: 20px;
+    /* Añade espaciado interno */
+}
+
+.sectitle {
+    text-align: center;
+    /* Centra el título */
+    margin-bottom: 30px;
+    /* Espacio inferior */
+    color: #000000;
+    /* Color del texto */
+}
+
+.history {
+    flex: 1;
+    /* Toma todo el espacio restante */
+    margin-right: 20px;
+    /* Espacio derecho entre historia y misión/visión */
+    opacity: 0.6;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo blanco transparente */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    padding: 20px;
+    /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Estilo para el título de la historia */
+.titledehistoria {
+    color: #000000;
+    /* Color del texto */
+    font-size: 24px;
+    /* Tamaño de la fuente */
+    margin-bottom: 10px;
+    /* Espacio inferior */
+}
+
+/* Estilo para el párrafo de la historia */
+.paraffohist {
+    color: #454444;
+    /* Color del texto */
+    line-height: 1.6;
+    /* Espaciado entre líneas */
+}
+/* Media Query para tabletas con ancho de 768px */
+@media (max-width: 768px) {
+    .containerleyend {
+        padding: 10px; /* Ajusta el espaciado interno */
+    }
+    .history {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+/* Media Query para dispositivos móviles con ancho de 480px */
+@media (max-width: 480px) {
+    .containerleyend {
+        padding: 5px; /* Ajusta el espaciado interno */
+    }
+    .history {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .titledehistoria {
+        font-size: 20px; /* Ajusta el tamaño del título */
+    }
+    .paraffohist {
+        font-size: 14px; /* Ajusta el tamaño del párrafo */
+    }
+}

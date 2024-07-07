@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="contact-container">
+
+    <div class="contact-formizq">
+        <h1>PONERSE EN CONTACTO</h1><br>
+        <p>No dude en contactarnos para más información.</p><br>
+        <form action="#" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required />
+            </div>
+            
+            <div class="form-group">
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" id="correo" name="correo" required />
+            </div>
+            <div class="form-group">
+                <label for="asunto">Asunto</label>
+                <input type="text" id="apellido" name="asunto" required />
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje.."></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Enviar Mensaje" />
+            </div>
+        </form>
+    </div>
+
+
+    <div class="contact-infoder">
+        <h2>Ponerse en Contacto</h2><br>
+        <p>Ponte en contacto con nosotros para mayor información</p>
+        
+        <div class="contact-details">
+            
+            <div class="detallecontac">
+                <div class="contaclogo">
+                    <img src="{% static 'sitio/assets/imagenes/wsp.png' %}" alt="">
+                </div>
+                <div class="contactex">
+                    <h4 class="titletelmail">Telefono</h3>
+                    <p class="textelmail"><span>+569 9336-9572</span></p>
+                </div>
+            </div>
+            <br>
+            <div class="detallecontac">
+                <div class="contaclogo">
+                    <img src="{% static 'sitio/assets/imagenes/gmailfondotrans.png' %}" alt="">
+                </div>
+                <div class="contactex">
+                    <h4 class="titletelmail">Correo</h3>
+                    <p class="textelmail"><span>contacto@emergency911.cl</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+{% endblock %}
+
+{% block additional_css %}
+<link rel="stylesheet" href="{% static 'sitio/styles/contstilo.css' %}">
+{% endblock %}

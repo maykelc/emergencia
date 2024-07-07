@@ -1,0 +1,104 @@
+/* Estilos para el fondo y el contenedor */
+.defondo {
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(240,10,10,1) 35%, rgba(0,0,0,1) 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Ajuste de padding para dispositivos pequeños */
+}
+
+.container {
+  width: 100%;
+  opacity: 0.8;
+}
+
+/* Estilos para el formulario */
+.card-container {
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+  position: relative; /* Añadir posición relativa */
+  z-index: 1; /* Añadir z-index para estar debajo del footer */
+
+}
+
+
+
+.card:hover {
+  transform: scale(1.0);
+
+}
+
+.form-container {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: calc(100% - 16px); /* Ajuste para el padding de 8px en cada lado */
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-group input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #1e6821;
+}
+
+/* Estilos para dispositivos más pequeños */
+@media (max-width: 768px) {
+  .defondo {
+      padding: 10px;
+  }
+
+  .container {
+      max-width: 100%;
+  }
+
+  .card-container {
+      padding: 10px;
+  }
+}
+
+/* Estilos para dispositivos muy pequeños (como smartphones) */
+@media (max-width: 480px) {
+  .defondo {
+      padding: 10px;
+  }
+
+  .card-container {
+      padding: 10px;
+  }
+
+  .form-group {
+      margin-bottom: 10px;
+  }
+}
+
+/* Estilo para la transición con ScrollReveal.js */
+

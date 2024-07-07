@@ -1,0 +1,216 @@
+/* Archivo: contacto-style.css */
+
+
+/* Inicio Contacto */
+
+
+.contaclogo{
+    flex: 0 0 60px; /* Ajusta el tamaño del logo aquí */
+    margin-right: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.contaclogo img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+}
+
+.detallecontac{
+  display: flex;
+    align-items: center;
+    margin-top: 10px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.titletelmail{
+ color: #4a4a4a;
+}
+
+
+.textelmail{
+color: #929292;
+font-size: 14px;
+}
+
+
+
+
+/* Fin Contacto */
+
+
+
+.contact-container {
+    display: flex;
+  flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    background: rgb(8,0,17);
+    background: rgb(8,0,17);
+    background: linear-gradient(180deg, rgba(8,0,17,1) 0%, rgba(137, 0, 217, 0.889) 34%, rgba(33,3,84,0.9724264705882353) 80%, rgba(8,0,17,1) 89%);
+  }
+  
+  .contact-infoder,
+  .contact-formizq {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 40px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    max-width: 600px;
+    opacity: 0.7;
+  }
+
+  .contact-formizq:hover{
+    background-color: rgba(255, 255, 255, 0.597);
+    box-shadow: 0 0 0 2px rgba(25, 1, 246, 0.365); /* Simulación del borde con box-shadow */
+    border-color:rgba(255, 0, 0, 0.774);
+  }
+  
+  .contact-infoder h2,
+  .contact-formizq h2 {
+    text-align: center;
+  }
+  
+  .contact-details {
+    text-align: left;
+    margin-top: 20px;
+  }
+  
+  .contact-details p {
+    margin: 5px 0;
+  }
+  
+  .contact-details span {
+    font-weight: bold;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    height: 100px; /* Puedes ajustar la altura según lo que necesites */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit; /* Asegura que el textarea use la misma fuente que el resto del formulario */
+    font-size: 16px; /* Ajusta el tamaño de la fuente para mejor legibilidad */
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
+    resize: vertical; /* Permite que el usuario ajuste la altura del textarea */
+    background-color: #f9f9f9; /* Color de fondo para mejor contraste */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves para interacciones */
+}
+
+.form-group textarea:focus {
+    border-color: #007bff; /* Color del borde cuando el textarea está enfocado */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra para indicar el enfoque */
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+}
+
+
+  .form-group input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .form-group input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media queries para dispositivos pequeños */
+
+  
+/* Media Queries para resoluciones de 768px */
+@media (max-width: 768px) {
+  .contact-infoder,
+  .contact-formizq {
+      width: 70%;
+      margin: 20px;
+  }
+
+  .contact-details p {
+      font-size: 14px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"] {
+      padding: 8px;
+  }
+
+  .form-group input[type="submit"] {
+      padding: 8px;
+  }
+
+  .contaclogo {
+      flex: 0 0 50px;
+      margin-right: 10px;
+  }
+
+  .textelmail {
+      font-size: 13px;
+  }
+}
+
+/* Media Queries para resoluciones de 480px */
+@media (max-width: 480px) {
+  .contact-infoder,
+  .contact-formizq {
+      width: 90%;
+      margin: 10px;
+      padding: 15px;
+  }
+
+  .contact-details p {
+      font-size: 12px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"] {
+      padding: 6px;
+      font-size: 14px;
+  }
+
+  .form-group input[type="submit"] {
+      padding: 6px;
+      font-size: 14px;
+  }
+
+  .contaclogo {
+      flex: 0 0 40px;
+      margin-right: 5px;
+  }
+
+  .textelmail {
+      font-size: 12px;
+  }
+}
+  

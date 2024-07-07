@@ -1,0 +1,142 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<div class="atras">
+    <div class="letrastitle">
+        <h1 class="titlesomos">Quienes Somos</h1>
+        <h3 class="subtitlequienes">Emergency911alerta</h3>
+        <br>
+        <p class="texquienes">Somos el primer portal informativo en Chile basado en Emergencias y alertas en nuestro territorio y a nivel internacional.</p>
+    </div>
+    <div class="quienesomos">
+        
+        <div class="misioncontainer">
+            <div class="mision-card cards">
+              <div class="cards-body">
+                <h2>Misión</h2><br>
+                <p>
+                  Ser un medio totalmente independiente capaz de llevar las
+                  informaciones con seriedad y compromiso.
+                </p>
+              </div>
+            </div>
+        </div>
+      
+        <div class="vision-cards cards">
+            <div class="cards-body">
+              <h2>Visión</h2><br>
+              <p>
+                Poder lograr ser un portal informativo reconocido por nuestro
+                trabajo ante la ciudadanía y los organismos de emergencias.
+              </p>
+            </div>
+        </div>
+      
+    </div>
+
+
+
+    <div class="defondo">
+        <div class="containerservice">
+            <div class="titledescr">
+                <h1 class="titleserv">Servicios</h1>
+                <br>
+                <p class="texserv">Respondedores de Emergencias</p>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="abajo">
+        <div class="imgabajo">
+            <div class="alertavista">
+                <h3>¿Por qué somos del área de emergencias?</h3>
+                <h4>Emergency 911 Alerta</h4>
+                <br>
+                <p>
+                    Somos un medio de Emergencias y alertas que nos enfocamos en el
+                    servicio a la comunidad, llevando la información a cada rincón de
+                    nuestro país.
+                </p>
+            </div>
+            <div class="cajas">
+                <div class="cajalogo">
+                    <img src="{% static 'sitio/assets/imagenes/carpeta.png' %}" alt="" />
+                </div>
+                <div class="cajatex">
+                    <h5>Enfoque centrado en la comunidad</h5>
+                    <p>
+                        Nuestro equipo de trabajo se enfoca en la recopilación de
+                        información ante los sucesos.
+                    </p>
+                </div>
+            </div>
+            <div class="cajas">
+                <div class="cajalogo">
+                    <img src="{% static 'sitio/assets/imagenes/integral.png' %}" alt="" />
+                </div>
+                <div class="cajatex">
+                    <h5>Gestión Integral de Incidentes</h5>
+                    <p>
+                        Realizamos las gestiones entre nuestros equipos de emergencias para
+                        tener mayor cobertura.
+                    </p>
+                </div>
+            </div>
+            <div class="cajas">
+                <div class="cajalogo">
+                    <img src="{% static 'sitio/assets/imagenes/muchos.png' %}" alt="" />
+                </div>
+                <div class="cajatex">
+                    <h5>Hablemos de prevención</h5>
+                    <p>
+                        Cuando hablamos de prevención nos referimos a la seguridad y
+                        preparación de la ciudadanía.
+                    </p>
+                </div>
+            </div>
+            <div class="cajas">
+                <div class="cajalogo">
+                    <img src="{% static 'sitio/assets/imagenes/alerta.png' %}" alt="" />
+                </div>
+                <div class="cajatex">
+                    <h5>Reporte de Emergencia</h5>
+                    <p>
+                        Informamos en tiempo real despachos de Emergencias y Desastres que
+                        ocurren.
+                    </p>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+</div>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+    // Configuración de ScrollReveal
+    ScrollReveal().reveal(".cajas, .cajalogo, .cajatex, .vision-cards", {
+        origin: "left",
+        distance: "50px",
+        duration: 1000,
+        easing: "ease-in-out",
+        reset: true,
+        interval: 200,
+    });
+
+
+
+    ScrollReveal().reveal(".misioncontainer", {
+        origin: "right",
+        distance: "50px",
+        duration: 1000,
+        easing: "ease-in-out",
+        reset: true,
+        interval: 200,
+    });
+
+</script>
+
+{% endblock %} {% block additional_css %}
+<link rel="stylesheet" href="{% static 'sitio/styles/serestilo.css' %}" />
+{% endblock %}

@@ -1,0 +1,441 @@
+/* Estilos generales y del layout base */
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Estilos del header */
+.header {
+  background-color: #000000;
+  color: white;
+  padding: 30px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.header-logo img {
+  height: 50px; /* Ajusta la altura del logo según sea necesario */
+}
+
+.loginuser img {
+  height: 30px; /* Ajusta la altura del logo según sea necesario */
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header .nav {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.header .nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.header .nav a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.header .header-left,
+.header .header-center,
+.header .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header .search-input {
+  padding: 8px;
+  border: 1px solid #180d0d;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.header .search-button {
+  padding: 8px 12px;
+  background-color: #173218;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.header .search-button:hover {
+  background-color: #9a0007;
+}
+
+/* Estilos del menú desplegable */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid #800a0a;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu ul li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu ul li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu ul li a:hover {
+  background-color: #a70404;
+}
+
+/* Mostrar el menú desplegable al pasar el mouse por encima */
+.nav a:hover + .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+
+
+/* Estilos del footer */
+.footer {
+  background-color: #000000;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  
+}
+
+.footer-columna{
+  padding-left: 10px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.footer .container-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer .footer-nav,
+.footer .social-icons {
+  flex: 1;
+  padding: 0 10px;
+  min-width: 200px;
+}
+
+.footer .footer-logo {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
+.footer-nav {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+
+
+.socialogos a{
+  margin-right: 10px;
+  align-items: center;
+}
+
+.socialogos img {
+  margin-right: 10px; /* Espacio entre la imagen y el texto del enlace */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;/*espacio entre cada red social*/
+  text-align: left;
+
+}
+
+.social-icons a {
+  display: inline-block;
+
+  color: #f0f0f0;
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.social-icons .x-logo {
+  border: 2px solid white;
+  border-radius: 50%; /* Asegura que el contorno blanco sea redondo */
+  padding: 2px; /* Ajusta el espacio interior para el contorno */
+}
+
+.social-icons a img {
+  opacity: 0.9;
+}
+/* Estilos para el botón de cerrar sesión */
+.logout {
+  margin-left: 10px; /* Margen izquierdo para separar del elemento anterior si es necesario */
+}
+
+.btn-logout {
+  display: inline-block;
+  padding: 8px 8px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #990202;
+}
+
+
+/* Inicio de Mediaquery 768px y 480px */
+@media screen and (max-width: 768px) {
+ 
+
+  .header {
+    padding: 15px 0;
+  }
+
+  .header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header .header-logo {
+    margin-bottom: 10px;
+  }
+
+  .header-logo {
+ order: 1;
+  }
+
+  .loginuser{
+    order: 2;
+  }
+
+  .logout{
+    order: 3;
+  }
+
+  .nav{
+    order: 4;
+  }
+
+  .busqueda{
+    order: 5;
+  }
+
+  .btn-busqueda{
+    order: 6;
+  }
+
+  .header .loginuser {
+
+    margin-bottom: 10px;
+  }
+
+  .header .logout {
+
+    margin-bottom: 10px;
+  }
+
+  .header .dropdown {
+    margin-bottom: 10px;
+  }
+
+  .header .busqueda {
+
+    margin-top: 10px;
+    flex: 1; /* Ocupa todo el espacio disponible */
+  }
+
+  .header .btn-busqueda {
+
+    margin-top: 10px;
+    margin-left: 10px; /* Espacio entre el input y el botón */
+  }
+
+  .header .nav {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /*footer*/
+  .footer .container-footer {
+    flex-direction: column;
+    align-items: center; /* Centrar elementos en el footer */
+    gap: 20px;
+  }
+
+  .footer .footer-nav {
+    order: 1;
+    text-align: center; /* Alinear texto al centro */
+  }
+
+  .footer .social-icons {
+    order: 2;
+  }
+
+  .footer .footer-columna {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .social-icons {
+    order: 4; /* Coloca las redes sociales al final */
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+
+  .header {
+    padding: 15px 0;
+  }
+
+  .header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header .header-logo {
+    order: 1;
+    margin-bottom: 10px;
+  }
+
+  .header .loginuser {
+    order: 2;
+    margin-bottom: 10px;
+  }
+
+  .header .logout {
+    order: 3;
+    margin-bottom: 10px;
+  }
+
+  .header .dropdown {
+    order: 4;
+    margin-bottom: 10px;
+  }
+
+  .header .busqueda {
+    order: 5;
+    margin-top: 10px;
+    flex: 1; /* Ocupa todo el espacio disponible */
+  }
+
+  .header .btn-busqueda {
+    order: 6;
+    margin-top: 10px;
+    margin-left: 10px; /* Espacio entre el input y el botón */
+  }
+
+  .header .nav {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /*footer*/
+  .footer .container-footer {
+    flex-direction: column;
+    align-items: center; /* Centrar elementos en el footer */
+    gap: 20px;
+  }
+
+  .footer .footer-nav {
+    order: 1;
+    text-align: center; /* Alinear texto al centro */
+  }
+
+  .footer .social-icons {
+    order: 2;
+  }
+
+  .footer .footer-columna {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .social-icons {
+    order: 4; /* Coloca las redes sociales al final */
+  }
+}
+/* Fin de Mediaquery 768px y 480px */

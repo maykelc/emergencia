@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="defondo">
+  <div class="container">
+    <!-- Formulario de Iniciar Sesión -->
+    <div class="card-container">
+      <div class="card form-container">
+        <h2>Iniciar Sesión</h2><br>
+        <form method="POST">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required />
+          </div>
+          <div class="form-group">
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required />
+          </div>
+          <div class="form-group">
+            <input type="submit" name="login" value="Iniciar Sesión" />
+          </div>
+          {% if error_login %}
+          <div class="error">{{ error_login }}</div>
+          {% endif %}
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  // Configuración de ScrollReveal
+  ScrollReveal().reveal("", {
+    origin: "left",
+    distance: "50px",
+    duration: 1000,
+    easing: "ease-in-out",
+    reset: true,
+    interval: 200,
+  });
+</script>
+
+{% endblock %} {% block additional_css %}
+
+<link rel="stylesheet" href="{% static 'sitio/styles/tilologin.css' %}" />
+{% endblock %}

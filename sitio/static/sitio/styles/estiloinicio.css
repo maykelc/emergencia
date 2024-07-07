@@ -1,0 +1,359 @@
+
+
+/* Estilos del banner */
+.banner {
+  margin-top: 0px;
+  position: relative;
+  overflow: hidden;
+  height: 600px; /* Altura fija del banner */
+}
+
+.containerbanner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%; /* Ancho completo del slider */
+  height: 100%; /* Altura completa del banner */
+}
+
+.slides {
+  display: flex;
+ 
+  transition: transform 3s ease-in-out; /* Transición suave para el deslizamiento */
+
+}
+
+.slide {
+  flex: 1 0 100%; /* Cada slide ocupa todo el espacio disponible */
+
+}
+
+.slide img {
+  width: 100%; /* Imágenes llenan el contenedor */
+  height: 100%; /* Imágenes llenan el contenedor */
+  object-fit: cover; /* Ajuste para llenar el contenedor sin deformar */
+}
+
+.buttonbanner {
+  position: absolute;
+  top: 50%;
+}
+
+
+
+/* Fin de banner */
+
+
+
+
+
+
+
+
+.containerbutton{
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(255,0,0,1) 100%);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btnemergency a {
+  display: block;
+  padding: 10px 20px;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(255,0,0,1) 100%);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: 0px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.btnemergency:hover{
+  box-shadow: 0 0 0 2px rgb(255, 0, 0); /* Simulación del borde con box-shadow */
+
+}
+
+
+/* Estilos de la sección de cards */
+.card-section {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px 0;
+
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  
+}
+
+.card {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s, box-shadow 0.3s; /* Añade una transición suave */
+  box-sizing: border-box; /* Incluye el borde en el tamaño total de la card */
+  border: 2px solid transparent; /* Borde inicial transparente para evitar el cambio de tamaño */
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666666;
+  padding-bottom: 10px;
+}
+
+.card:hover {
+  border-color: red; /* Cambia el color del borde al pasar el mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra para resaltar más */
+}
+
+/* Estilo para agregar espacio entre las cards dentro de ul.filascard */
+ul.filascard .card {
+  margin-right: 10px; /* Margen a la derecha de cada card */
+}
+
+.card a {
+  display: block;
+  background-color: #f5f5f5;
+  text-decoration: none;
+  color: #333;
+}
+
+.card-section .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+
+.card-sectionder {
+  flex: 1;
+  padding: 20px;
+  
+  
+}
+
+
+
+
+/* Estilos para la sección de noticias */
+.noticias .containernoticia {
+  display: flex;
+}
+
+.containernoticia{
+  background: rgb(255,0,0);
+background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(50,0,0,1) 35%, rgba(0,0,0,1) 100%);
+}
+.slidernoticiaizq {
+  flex: 1;
+}
+
+.slider-news {
+  display: flex;
+  flex-direction: column;
+}
+
+.slidescard {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-card {
+  display: flex;
+  width: 100%;
+  border: 1px solid #ccc; /* Añade un borde para visualización */
+}
+
+.news-image {
+  flex: 60%; /* Ocupa el 60% del ancho de .news-card */
+}
+
+.news-content {
+  flex: 40%; /* Ocupa el 40% del ancho de .news-card */
+  padding: 10px; /* Añade espaciado dentro de .news-content */
+}
+
+.news-content h3,
+.news-content p {
+  margin: 0; /* Elimina el margen por defecto para el contenido */
+}
+
+.buttonotice {
+  margin-top: 10px; /* Ajuste de espacio arriba de los botones */
+}
+
+.prev-news,
+.next-news {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.prev-news {
+  margin-right: 10px; /* Espacio entre los botones */
+}
+
+/* Fin Estilos de la sección de cards */
+
+
+/* Estilos sección de noticias */
+
+
+.noticias .containernoticia {
+  display: flex;
+}
+
+.slidernoticiaizq {
+  flex: 1;
+  margin-left: 35px;
+}
+
+/* Fin Estilos  sección de noticias */
+
+
+
+
+
+/* Seccion de central online*/
+.containercentralr {
+  margin: 0px 0;
+  height: 100%;
+}
+
+.central-online {
+  margin: 0px 0;
+  padding: 0%;
+  height: 100%;
+}
+
+
+.contentcentralr{
+  margin: 0px 0;
+  height: 100%;
+  background-color: black;
+}
+
+.contentcentralr h2{
+  color: white;
+  padding-left: 550px;
+}
+
+.onlinecentral{
+  padding-left: 500px;
+}
+
+/* Fin Seccion de central online*/
+
+
+/* Media queries */
+@media (max-width: 768px) {
+  .home-buttons .containerbutton {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .noticias .containernoticia {
+    flex-direction: column;
+  }
+
+  .slidernoticiaizq, .card-sectionder {
+    width: 100%;
+  }
+
+
+
+  .contentcentralr h2 {
+    padding-left: 20px; /* Ajustar el padding según necesidad */
+  }
+  
+  .onlinecentral {
+    padding-left: 20px; /* Ajustar el padding según necesidad */
+  }
+
+}
+
+
+
+@media (max-width: 480px) {
+  .banner .buttonbanner {
+    display: none; /* Oculta los botones de navegación del banner */
+  }
+
+  .btnemergency {
+    padding: 8px 12px; /* Reduce el padding de los botones */
+    font-size: 14px; /* Reduce el tamaño del texto */
+  }
+
+  .noticias .slidernoticiaizq {
+    margin-bottom: 10px; /* Reduce el margen inferior */
+  }
+
+  .card-grid {
+    flex-direction: column; /* Cambia a columna */
+  }
+
+  .card {
+    width: 100%; /* Ocupa todo el ancho */
+  }
+
+  .contentcentralr h2 {
+    padding-left: 10px; /* Ajustar el padding según necesidad */
+    font-size: 16px; /* Ajustar el tamaño del texto según necesidad */
+  }
+  
+  .onlinecentral {
+    padding-left: 10px; /* Ajustar el padding según necesidad */
+    font-size: 14px; /* Ajustar el tamaño del texto según necesidad */
+  }
+
+
+}
+/* Media query para pantallas de 768px y menos */
+@media (max-width: 768px) {
+  .banner {
+    height: 300px; /* Altura ajustada para pantallas pequeñas */
+  }
+
+  .slides {
+    width: 100%; /* Ajustar el ancho total en pantallas pequeñas */
+  }
+}
+
+/* Media query para pantallas de 480px y menos */
+@media (max-width: 480px) {
+  .banner {
+    height: 200px; /* Altura ajustada para pantallas muy pequeñas */
+  }
+
+  .buttonbanner button {
+    padding: 5px; /* Botones más pequeños para pantallas muy pequeñas */
+    font-size: 14px; /* Tamaño de fuente reducido para los botones */
+  }
+
+  .banner .buttonbanner {
+    display: none; /* Oculta los botones de navegación del banner */
+  }
+}

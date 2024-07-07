@@ -1,0 +1,76 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<section class="servicios">
+    <div class="contentserv">
+        <div class="imgcontent">
+            <div class="imag">
+                <img src="{% static 'sitio/assets/imagenes/bomberos-chile-inc.jpg' %}" alt="">
+            </div>
+            <div class="titulos">
+                <h1 class="titleserv">Conoce Los Servicios De 911 Alerta</h1>
+            </div>
+        </div><br>
+        <div class="subtitleinfo">
+            <div class="informa">
+                <h3 class="subtitle">Nuestros servicios</h3><br>
+                <h4 class="frase">Aquí te compartiremos información sobre nuestra labor.</h4>
+                 <p class="texinfo">El trabajo de nuestra organización es netamente información y prevención para la población, pero también entregar una información de calidad y con profesionalismo.</p>
+            </div>     
+        </div>
+        <div class="cuadroservicio">
+            <div class="serinfo">
+                <div class="cajitas">
+                    <div class="logito">
+                        <img src="" alt="">
+                    </div>
+                    <div class="cajitatex">
+                        <h4 class="cajitatextex">Información de Noticias</h4>
+                        <p class="cajitainfoinfo">Cobertura completa sobre noticias basadas en nuestra índole.</p>
+                    </div>
+                </div>
+                <div class="cajitas">
+                    <div class="logito">
+                        <img src="" alt="">
+                    </div>
+                    <div class="cajitatex">
+                        <h4 class="cajitatextex">Información internacional</h4>
+                        <p class="cajitainfoinfo">Te compartiremos información relevante sobre los acontecimientos importantes en el mundo.</p>
+                    </div>
+                </div>
+                <div class="cajitas">
+                    <div class="logito">
+                        <img src="" alt="">
+                    </div>
+                    <div class="cajitatex">
+                        <h4 class="cajitatextex">
+                            Informe sismológico</h4>
+                        <p class="cajitainfoinfo">Cobertura global sobre los sismos más importantes que ocurren a nivel nacional e internacional.</p>
+                    </div>
+                </div>
+                <div class="cajitas">
+                    <div class="logito">
+                        <img src="" alt="">
+                    </div>
+                    <div class="cajitatex">
+                        <h4 class="cajitatextex">
+                            Informe de Emergencias</h4>
+                        <p class="cajitainfoinfo">Información en tiempo real sobre emergencias y desastres.</p>
+                    </div>
+                </div>
+                <div class="cajitas">
+                    <div class="logito">
+                        <img src="" alt="">
+                    </div>
+                    <div class="cajitatex">
+                        <h4 class="cajitatextex">Reportes de alertas</h4>
+                        <p class="cajitainfoinfo">Todas las alertas te la informaremos en un solo canal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</section>
+{% endblock %} {% block additional_css %}
+<link rel="stylesheet" href="{% static 'sitio/styles/tiroservicio.css' %}" />
+{% endblock %}

@@ -1,0 +1,208 @@
+/* Estilos para Quiénes Somos */
+.quienesomos {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.letrastitle {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+}
+
+.titlesomos {
+    text-align: center;
+    color: #d5d5d5;
+    margin-bottom: 10px;
+}
+
+.subtitlequienes {
+    text-align: center;
+    color: #d1d1d1;
+    margin-bottom: 10px;
+}
+
+.texquienes {
+    text-align: justify;
+    color: #a7a7a7;
+    line-height: 1.6;
+    margin-left: 200px;
+}
+
+/* Estilos para Misión y Visión */
+.mision-container,
+.vision-cards {
+    flex: 0 0 calc(50% - 20px); /* Ajusta el ancho para que ocupen el 50% del contenedor con un margen de 20px */
+    margin-bottom: 20px; /* Margen derecho entre Misión y Visión */
+}
+
+.mision-container {
+    margin-right: 50px; /* Margen derecho entre Misión y Visión */
+}
+
+.vision-cards {
+    margin-left: 55px; /* Margen izquierdo entre Visión y Misión */
+}
+
+
+.cards {
+    background: rgba(156, 145, 145, 0.7); /* Fondo blanco transparente */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio inferior */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    opacity: 0.9;
+}
+
+
+.atras {
+    position: relative;
+    background: rgb(2,17,0);
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 6%, rgba(33,217,0,1) 43%, rgba(0,0,0,1) 80%);
+}
+
+
+.defondo {
+    /*background-image: url("{% static 'sitio/assets/imagenes/bombero-en-Chile-slider.jpg' %}");/* Ruta de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    
+}
+
+.containerservice {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.titledescr {
+    text-align: center;
+    color: #fff;
+}
+
+.titledescr h1 {
+    font-size: 2.5rem;
+}
+
+.titledescr p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+
+
+.imgabajo {
+    background-color: rgba(156, 145, 145, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 70px;
+    margin-right: 70px;
+    opacity: 0.9;
+}
+
+.titleserv{
+    color: #d5d5d5;
+}
+.texserv{
+    color: #d5d5d5;
+}
+
+.cajas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.cajalogo {
+    flex: 0 0 80px; /* Ajusta el tamaño del logo aquí */
+    margin-right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.cajalogo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+}
+
+.cajatex {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .quienesomos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .letrastitle {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .texquienes {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .mision-container,
+    .vision-cards {
+        flex: 1 1 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .vision-cards {
+        margin-top: 20px; /* Añade margen arriba para separar de Misión en dispositivos pequeños */
+    }
+
+    
+    
+    .cajas {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cajalogo {
+        margin: 0 auto 10px;
+        width: 60px; /* Ajusta el ancho del logo */
+        height: 60px; /* Ajusta la altura del logo para mantener la proporción cuadrada */
+        border-radius: 50%; /* Asegurar que el contenedor sea circular */
+        overflow: hidden; /* Ocultar cualquier desbordamiento para mantener la forma circular */
+    }
+
+    .cajalogo img {
+        width: 100%; /* Ajusta el ancho del logo al contenedor */
+        height: 100%; /* Ajusta la altura del logo al contenedor */
+        border-radius: 50%; /* Asegurar que la imagen sea circular */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .titlesomos {
+        font-size: 1.5rem; /* Ajusta el tamaño del título para dispositivos muy pequeños */
+    }
+
+    .subtitlequienes {
+        font-size: 1.2rem; /* Ajusta el tamaño del subtítulo para dispositivos muy pequeños */
+    }
+
+    .texquienes {
+        font-size: 0.9rem; /* Ajusta el tamaño del texto para dispositivos muy pequeños */
+    }
+
+    .cards {
+        padding: 15px; /* Reducir el espaciado interno de las tarjetas en dispositivos muy pequeños */
+    }
+}

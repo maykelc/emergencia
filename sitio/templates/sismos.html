@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<br><br><h1>Sismos Recientes</h1><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Profundidad</th>
+                <th>Magnitud</th>
+                <th>Referencia Geográfica</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for sismo in sismos %}
+            <tr>
+                <td>{{ sismo.Fecha }}</td>
+                <td>{{ sismo.Profundidad }} Km</td>
+                <td>{{ sismo.Magnitud }}</td>
+                <td>{{ sismo.RefGeografica }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table><br><br>
+{% endblock %}
+
+{% block additional_css %}
+<link rel="stylesheet" href="{% static 'sitio/styles/sismostilo.css' %}">
+{% endblock %}

@@ -1,0 +1,161 @@
+/* Contenedor principal */
+.containeralert {
+    background-image: url("{% static 'sitio/assets/imagenes/bomberos-slider.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Tarjeta del formulario */
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Encabezado del formulario */
+.card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Botón del formulario */
+.card button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+/* Efecto hover para el botón */
+.card button:hover {
+    background-color: #0056b3;
+}
+
+/* Lista de alertas */
+.alert-list {
+    margin-top: 20px;
+}
+
+.alert-list h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.alert-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.alert-list li {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.alert-list li strong {
+    font-weight: bold;
+}
+
+.alert-list li .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.alert-list li .action-buttons button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.alert-list li .action-buttons button:hover {
+    opacity: 0.8;
+}
+
+/* Estilo específico para el botón de eliminar */
+.alert-list li .action-buttons .delete-button {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Estilo específico para el botón de modificar */
+.alert-list li .action-buttons .edit-button {
+    background-color: #ffc107;
+    color: #333;
+}
+
+/* Media query para dispositivos pequeños */
+@media (max-width: 768px) {
+    .containeralert {
+        padding: 10px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .card button {
+        font-size: 14px;
+    }
+
+    .alert-list li .action-buttons {
+        flex-wrap: wrap;
+    }
+
+    .alert-list li .action-buttons button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+/* Media query para dispositivos muy pequeños (480px) */
+@media (max-width: 480px) {
+    .containeralert {
+        padding: 5px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .card button {
+        font-size: 12px;
+    }
+
+    .alert-list li {
+        padding: 10px;
+    }
+}

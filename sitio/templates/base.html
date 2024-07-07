@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency 911</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sitio/styles/stilobas.css' %}" />
+    {% block additional_css %}{% endblock %}
+</head>
+
+<body>
+    <!-- Inicio Header-->
+    <header class="header">
+        <div class="container">
+            <!--Inicio Logo-->
+            <div class="header-logo">
+                <a href="{% url 'incio' %}"><img src="{% static 'sitio/assets/imagenes/Logo.png' %}" alt="" /></a>
+            </div>
+            <!--Fin Logo-->
+            <!--Inicio Menu-->
+            <div class="header-center">
+                <nav class="nav">
+                    <a href="" class="dropdown-toggle">Inicio</a>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="{% url 'nosotros' %}">Historia</a></li>
+                            <li><a href="{% url 'quienessomos' %}">Msion</a></li>
+                            <li><a href="{% url 'quienessomos' %}">Vision</a></li>
+                            <li><a href="{% url 'servicioalerta' %}">Servicios</a></li>
+                            <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <a href="" class="dropdown-toggle">Reporte</a>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="{% url 'sismos' %}">Sismos</a></li>
+                            <li><a href="{% url 'clima' %}">Clima</a></li>
+                            <li><a href=""></a>Noticias</li>
+                            <li><a href=""></a>Emergencias</li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!--Fin Menu-->
+
+            <div class="header-right">
+                <!--Inicio Busqueda-->
+                <div class="busqueda">
+                    <input type="text" placeholder="Buscar..." class="search-input" />
+                    <button class="search-button">Buscar</button>
+                </div>
+                <!--Fin Busqueda-->
+                <!--Inicio Login y Logout-->
+                <div class="loginuser">
+                    <a href="{% url 'login' %}">
+                        <img src="{% static 'sitio/assets/imagenes/user-logo.png' %}"alt="" />
+                    </a>
+                </div>
+                <div class="logout">
+                    <a href="" class="btn-logout">Cerrar Sesion</a>
+                </div>
+                <!--Fin Login y Logout-->
+            </div>
+        </div>
+    </header>
+    <!--Fin Header-->
+
+    <!--Inicio Main-->
+    <main class="main-content">{% block content %}{% endblock %}</main>
+    <!--Fin Main-->
+
+    <!--Inicio Footer-->
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-columna">
+                <!--Inicio links Footer-->
+                <nav class="footer-nav">
+                    <a href="{% url 'quienessomos' %}">Nosotros</a>
+                    <a href="{% url 'servicioalerta' %}">Servicios</a>
+                    <a href="{% url 'contacto' %}">Contactanos</a>
+                </nav>
+                <!--Fin Links Footer-->
+            </div>
+            <div class="footer-columna">
+                <!--Inicio Footer Logo-->
+                <a href=""><img class="footer-logo" src="{% static 'sitio/assets/imagenes/Logo.png' %}" alt="" /></a>
+                <p>2024 Tu Empresa. Todos los derechos reservados.</p>
+                <!--Fin Footer Logo-->
+            </div>
+            <div class="footer-columna">
+                <!--Inicio Links de Redes-->
+                <h3>Redes Sociales</h3>
+                <br />
+                <div class="social-icons">
+                    <div class="socialogos">
+                        <a href="https://www.facebook.com/">
+                            <img src="{% static 'sitio/assets/imagenes/face-logo-negro.png' %}" alt="" />
+                        </a>       
+                    </div>
+
+                    <div class="socialogos">
+                        <a href="https://www.instagram.com/">
+                            <img src="{% static 'sitio/assets/imagenes/insta-negro-logo.png' %}" alt="" />
+                        </a>
+                    </div>
+
+                    <div class="socialogos">
+                        <a href="https://www.x.com/">
+                            <img src="{% static 'sitio/assets/imagenes/xlogo.jpg' %}"  class="x-logo" alt="" />
+                        </a>
+                    </div>
+
+                    <div class="socialogos">
+                        <a href="https://www.youtube.com/">
+                            <img src="{% static 'sitio/assets/imagenes/youtube-black.png' %}" alt="" />
+                            
+                        </a>
+                    </div>
+                </div>
+                <!--Fin Links de Redes-->
+            </div>
+        </div>
+    </footer>
+    <!--Fin Footer-->
+    <script src="{% static 'sitio/js/base.js' %}"></script>
+</body>
+
+</html>

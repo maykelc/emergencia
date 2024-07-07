@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<section class="leyend">
+  <div class="containerleyend">
+    
+
+    <div class="history">
+      <h1 class="sectitle">Nuestros Inicios</h1>
+      <div class="history-card card">
+        <div class="card-body">
+          <h2 class="titledehistoria">Historia</h2>
+          <p class="paraffohist">
+            Emergency 911 Alerta, es el primer medio independiente de Chile en
+            dónde la labor principal se basa en los reportes de las emergencias,
+            desastres, alertas, Sismos entre otras informaciones de nuestra
+            índole. Nuestro medio informativo es totalmente independiente de
+            cualquier organización en el territorio Chileno. La creación y
+            conformación de nuestro medio está hecho con el objetivo de alcanzar
+            un amplio conocimiento de las Emergencias y prevención ante las
+            diversas situaciones que ocurren. Nuestros inicios fueron
+            conformados debido a las distintas actividades de la vida cotidiana
+            sobre los sucesos que han ocurrido en nuestro país. El “Emergency
+            911 Alerta” se creó a mediados de abril del 2024, debido al
+            megaincendio registrado en la región de Valparaíso en dónde las
+            comunicaciones dificultaron de gran consideración. Dada esta
+            situación, un grupo de voluntarios pertenecientes a las Emergencias
+            pudo tomar en acuerdo de poder crear un portal informativo de
+            emergencias en la cual sea capaz de entregar una pronta respuesta
+            sobre eventos de menor y gran magnitud a la población. Como medio
+            informativo, entregaremos el total apoyo tanto a la ciudadanía como
+            a organismos de emergencias quienes quieran unirse a nuestro medio,
+            así lograr una comunicación fluida ante eventos que ocurran y ser un
+            puente de apoyo informativo independiente.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    
+
+  </div>
+</section>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  // Script ScrollReveal
+  document.addEventListener("DOMContentLoaded", function () {
+    // Configuración de ScrollReveal
+    ScrollReveal().reveal(".vision-card, .misioncontainer, .history-card", {
+      origin: "left", // Origen de la animación
+      distance: "50px", // Distancia de animación
+      duration: 1000, // Duración de la animación (en milisegundos)
+      easing: "ease-in-out", // Función de aceleración
+      reset: true, // Reiniciar animación al desplazarse hacia arriba
+      interval: 200 // Intervalo entre animaciones
+    });
+  });
+
+
+</script>
+
+{% endblock %} {% block additional_css %}
+<link rel="stylesheet" href="{% static 'sitio/styles/yoestilo.css' %}" />
+{% endblock %}
